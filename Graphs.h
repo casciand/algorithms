@@ -6,12 +6,12 @@
 #include <list>
 #include <vector>
 
-// dfs, bfs, scc, articulation points, dijkstras, prims & kruskals (with and without heap)
+// dfs, bfs, scc, articulation points, kruskals, prims & dijkstras (with and without heap)
 // general: greedy, dynamic programming, sorting
 
 class UnweightedDirectedGraph {
 private:
-    std::map<int, std::list<int>> edgeList;
+    std::map<int, std::list<int>> adjList;
     std::map<int, bool> visited;
 
 public:
@@ -34,6 +34,7 @@ public:
     void addEdge(int v, int w, int weight);
     void prims();
     void kruskals();
+    void dijkstras(int v);
 };
 
 UnweightedDirectedGraph::UnweightedDirectedGraph() {
@@ -49,7 +50,7 @@ UnweightedDirectedGraph::UnweightedDirectedGraph() {
 }
 
 void UnweightedDirectedGraph::addEdge(int v, int w) {
-    edgeList[v].push_back(w);
+    adjList[v].push_back(w);
 }
 
 WeightedUndirectedGraph::WeightedUndirectedGraph() {

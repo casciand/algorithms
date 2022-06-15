@@ -1,6 +1,6 @@
 #include <iostream>
 #include <queue>
-#include "Graph.h"
+#include "Graphs.h"
 
 void UnweightedDirectedGraph::bfs(int v) {
     std::queue<int> q;
@@ -14,7 +14,7 @@ void UnweightedDirectedGraph::bfs(int v) {
         q.pop();
 
         // add neighbors to queue
-        for (int w : edgeList[v]) {
+        for (int w : adjList[v]) {
             if (!visited[w]) {
                 q.push(w);
             }

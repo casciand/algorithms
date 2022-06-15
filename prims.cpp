@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Graph.h"
+#include "Graphs.h"
 
 void WeightedUndirectedGraph::prims() {
     std::vector<int> distances(numNodes, INT32_MAX);

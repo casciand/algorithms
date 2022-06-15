@@ -2,7 +2,7 @@
 #include <set>
 #include <vector>
 #include <algorithm>
-#include "Graph.h"
+#include "Graphs.h"
 
 // ensure vertices are not in the same set
 // usually would employ Union-Find data structure
@@ -56,7 +56,7 @@ void WeightedUndirectedGraph::kruskals() {
 
 int main() {
     WeightedUndirectedGraph g;
-    g.kruskals(); // O(Vlog(E))
+    g.kruskals(); // O(Vlog(E)) with Union-Find
 
     return 0;
 }

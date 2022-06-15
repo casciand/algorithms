@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Graph.h"
+#include "Graphs.h"
 
 void UnweightedDirectedGraph::dfs(int v) {
     if (!visited[v]) {
@@ -8,7 +8,7 @@ void UnweightedDirectedGraph::dfs(int v) {
         std::cout << v << " ";
 
         // recurse for each neighbor
-        for (int w : edgeList[v]) {
+        for (int w : adjList[v]) {
             dfs(w);
         }
     }
