@@ -25,12 +25,13 @@ public:
 class WeightedUndirectedGraph {
 private:
     std::vector<std::vector<int>> adj;
+    int numNodes;
 
 public:
     WeightedUndirectedGraph();
 
     void addEdge(int v, int w, int weight);
-    void prims(int v);
+    void prims();
 };
 
 UnweightedDirectedGraph::UnweightedDirectedGraph() {
@@ -55,6 +56,7 @@ WeightedUndirectedGraph::WeightedUndirectedGraph() {
             { 0, 3, 0, 0, 7 },
             { 6, 8, 0, 0, 9 },
             { 0, 5, 7, 9, 0 } };
+    numNodes = 5;
 }
 
 void WeightedUndirectedGraph::addEdge(int v, int w, int weight) {
