@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Graph.h"
 
-void Graph::dfs(int v) {
+void UnweightedDirectedGraph::dfs(int v) {
     if (!visited[v]) {
         // visit node
         visited[v] = true;
@@ -15,7 +15,7 @@ void Graph::dfs(int v) {
 }
 
 int main() {
-    Graph g;
+    UnweightedDirectedGraph g;
     g.dfs(1); // O(V + E)
 
     return 0;

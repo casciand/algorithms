@@ -4,25 +4,36 @@
 
 #include <map>
 #include <list>
+#include <vector>
 
 // dfs, bfs, scc, articulation points, prims & kruskals (with and without heap)
 // general: greedy, dynamic programming, sorting
 
-// defines a directed graph
-class Graph {
+class UnweightedDirectedGraph {
 private:
     std::map<int, std::list<int>> adj;
     std::map<int, bool> visited;
 
 public:
-    Graph();
+    UnweightedDirectedGraph();
 
     void addEdge(int v, int w);
     void dfs(int v);
     void bfs(int v);
 };
 
-Graph::Graph() {
+class WeightedUndirectedGraph {
+private:
+    std::vector<std::vector<int>> adj;
+
+public:
+    WeightedUndirectedGraph();
+
+    void addEdge(int v, int w, int weight);
+    void prims(int v);
+};
+
+UnweightedDirectedGraph::UnweightedDirectedGraph() {
     addEdge(0, 5);
     addEdge(1, 0);
     addEdge(1, 3);
@@ -34,8 +45,21 @@ Graph::Graph() {
     addEdge(5, 4);
 }
 
-void Graph::addEdge(int v, int w) {
+void UnweightedDirectedGraph::addEdge(int v, int w) {
     adj[v].push_back(w);
+}
+
+WeightedUndirectedGraph::WeightedUndirectedGraph() {
+    adj = { { 0, 2, 0, 6, 0 },
+            { 2, 0, 3, 8, 5 },
+            { 0, 3, 0, 0, 7 },
+            { 6, 8, 0, 0, 9 },
+            { 0, 5, 7, 9, 0 } };
+}
+
+void WeightedUndirectedGraph::addEdge(int v, int w, int weight) {
+    adj[v][w] = weight;
+    adj[w][v] = weight;
 }
 
 

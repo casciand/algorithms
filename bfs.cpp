@@ -2,7 +2,7 @@
 #include <queue>
 #include "Graph.h"
 
-void Graph::bfs(int v) {
+void UnweightedDirectedGraph::bfs(int v) {
     std::queue<int> q;
     q.push(v);
 
@@ -23,7 +23,7 @@ void Graph::bfs(int v) {
 }
 
 int main() {
-    Graph g;
+    UnweightedDirectedGraph g;
     g.bfs(1); // O(V + E)
 
     return 0;
