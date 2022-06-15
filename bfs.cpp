@@ -14,7 +14,7 @@ void UnweightedDirectedGraph::bfs(int v) {
         q.pop();
 
         // add neighbors to queue
-        for (int w : adj[v]) {
+        for (int w : edgeList[v]) {
             if (!visited[w]) {
                 q.push(w);
             }

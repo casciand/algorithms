@@ -8,7 +8,7 @@ void UnweightedDirectedGraph::dfs(int v) {
         std::cout << v << " ";
 
         // recurse for each neighbor
-        for (int w : adj[v]) {
+        for (int w : edgeList[v]) {
             dfs(w);
         }
     }

@@ -7,14 +7,16 @@ void WeightedUndirectedGraph::prims() {
     int index = 0, sum = 0;
 
     for (int i = 0; i < numNodes - 1; ++i) {
+        // update the smallest edge for each vertex
         for (int j = 0; j < numNodes; ++j) {
-            if (adj[index][j] < distances[j] && adj[index][j] != 0) {
-                distances[j] = adj[index][j];
+            if (adjMatrix[index][j] < distances[j] && adjMatrix[index][j] != 0) {
+                distances[j] = adjMatrix[index][j];
             }
         }
 
         int smallest = INT32_MAX;
 
+        // find the smallest current edge to add
         for (int j = 0; j < distances.size(); ++j) {
             if (distances[j] < smallest && distances[j] >= 0) {
                 smallest = distances[j];
