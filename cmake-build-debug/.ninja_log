@@ -1,0 +1,16 @@
+# ninja log v5
+1	5164	6769418072132940	CMakeFiles/algorithms.dir/main.cpp.obj	58ffd628d4f3753d
+3	1943	6769533724679732	build.ninja	a75d2178c703f141
+10	1574	6769532934394663	CMakeFiles/algorithms.dir/bfs.cpp.obj	aa9b41d83ea679d1
+1	1453	6769418455561130	CMakeFiles/algorithms.dir/prims.cpp.obj	f12f2c2be5136655
+1	2718	6769532945329684	CMakeFiles/algorithms.dir/dfs.cpp.obj	256ba46e46aab48b
+2	1109	6769533814022850	CMakeFiles/dfs.dir/dfs.cpp.obj	f99b2e7905acadec
+1115	1406	6769533817303332	dfs.exe	cc04cef1b92e5b2b
+21	1242	6769534184457143	CMakeFiles/dfs.dir/dfs.cpp.obj	f99b2e7905acadec
+1243	1560	6769534187893375	dfs.exe	cc04cef1b92e5b2b
+1	3006	6769560425896906	CMakeFiles/bfs.dir/bfs.cpp.obj	cc819e8f7dac59dc
+3009	3777	6769560434645398	bfs.exe	302c9232fc92c50c
+12	1530	6769560805313248	CMakeFiles/bfs.dir/bfs.cpp.obj	cc819e8f7dac59dc
+1532	1862	6769560808748923	bfs.exe	302c9232fc92c50c
+10	1173	6769561250929711	CMakeFiles/dfs.dir/dfs.cpp.obj	f99b2e7905acadec
+1174	1507	6769561254210193	dfs.exe	cc04cef1b92e5b2b
